@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="450" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#1E4A3C"/>
+  <text x="300" y="200" font-family="system-ui, sans-serif" font-size="28" font-weight="700" fill="#F4F3EE" text-anchor="middle">Maintenance</text>
+  <rect x="200" y="250" width="200" height="2" fill="#6F8F78" opacity="0.5"/>
+  <text x="300" y="290" font-family="system-ui, sans-serif" font-size="12" fill="#686D68" text-anchor="middle">600x450 • WebP/AVIF recommended</text>
+</svg>

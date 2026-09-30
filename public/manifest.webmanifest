@@ -1,0 +1,23 @@
+{
+  "name": "AquaSpace — Aquascape Studio Bandung",
+  "short_name": "AquaSpace",
+  "description": "AquaSpace menghadirkan custom aquascape, aquarium setup, aquatic plants dan maintenance untuk rumah maupun ruang bisnis.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F3EE",
+  "theme_color": "#17352B",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "apple touch icon"
+    }
+  ]
+}

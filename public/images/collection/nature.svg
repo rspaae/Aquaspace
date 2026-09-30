@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+  <rect width="800" height="1000" fill="#1E4A3C"/>
+  <text x="400" y="450" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="#F4F3EE" text-anchor="middle">Nature Style</text>
+  <text x="400" y="510" font-family="system-ui, sans-serif" font-size="18" fill="#6F8F78" text-anchor="middle">Collection Placeholder</text>
+  <rect x="300" y="570" width="200" height="2" fill="#6F8F78" opacity="0.5"/>
+  <text x="400" y="610" font-family="system-ui, sans-serif" font-size="14" fill="#686D68" text-anchor="middle">800x1000 • WebP/AVIF recommended</text>
+</svg>

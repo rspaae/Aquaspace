@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500">
+  <rect width="1200" height="1500" fill="#17352B"/>
+  <text x="600" y="700" font-family="system-ui, sans-serif" font-size="40" font-weight="700" fill="#F4F3EE" text-anchor="middle">AquaSpace Studio</text>
+  <text x="600" y="760" font-family="system-ui, sans-serif" font-size="20" fill="#6F8F78" text-anchor="middle">About Placeholder</text>
+  <rect x="500" y="820" width="200" height="2" fill="#6F8F78" opacity="0.5"/>
+  <text x="600" y="860" font-family="system-ui, sans-serif" font-size="14" fill="#686D68" text-anchor="middle">1200x1500 • WebP/AVIF recommended</text>
+</svg>

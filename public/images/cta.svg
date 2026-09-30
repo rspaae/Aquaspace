@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <rect width="1920" height="1080" fill="#17352B"/>
+  <text x="960" y="500" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#F4F3EE" text-anchor="middle">Let's Build Something Alive</text>
+  <text x="960" y="560" font-family="system-ui, sans-serif" font-size="24" fill="#6F8F78" text-anchor="middle">CTA Background Placeholder</text>
+  <rect x="860" y="620" width="200" height="2" fill="#6F8F78" opacity="0.5"/>
+  <text x="960" y="660" font-family="system-ui, sans-serif" font-size="16" fill="#686D68" text-anchor="middle">1920x1080 • WebP/AVIF recommended</text>
+</svg>
