@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next'
 import { Outfit, Plus_Jakarta_Sans } from 'next/font/google'
+import { Providers } from '@/components/providers/Providers'
 import './globals.css'
 
 const outfit = Outfit({
@@ -77,7 +78,9 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.webmanifest" />
       </head>
-      <body className="min-h-screen">{children}</body>
+      <body className="min-h-screen">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

@@ -14,7 +14,7 @@ export function formatWhatsAppMessage(service?: string): string {
 }
 
 export function getWhatsAppUrl(message?: string): string {
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6281234567890'
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '628992846900'
   const text = encodeURIComponent(message || formatWhatsAppMessage())
   return `https://wa.me/${phoneNumber}?text=${text}`
 }

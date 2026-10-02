@@ -77,7 +77,7 @@ npm start
 Copy `.env.example` to `.env.local` and configure:
 
 ```env
-NEXT_PUBLIC_WHATSAPP_NUMBER=6281234567890
+NEXT_PUBLIC_WHATSAPP_NUMBER=628992846900
 ```
 
 ## 🖼️ Images

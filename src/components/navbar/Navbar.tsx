@@ -3,15 +3,17 @@
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, ChevronRight } from 'lucide-react'
+import { Menu, X, ChevronRight, ShoppingBag } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/Button'
+import { useCart } from '@/context/CartContext'
 
 const navItems = [
   { href: '#home', label: 'Home' },
   { href: '#about', label: 'About' },
   { href: '#collection', label: 'Collection' },
   { href: '#services', label: 'Services' },
+  { href: '#catalog', label: 'Katalog' },
   { href: '#works', label: 'Works' },
 ]
 
@@ -19,6 +21,7 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [mounted, setMounted] = useState(false)
+  const { totalItems, toggleCart } = useCart()
 
   useEffect(() => {
     setMounted(true)
@@ -88,6 +91,25 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-3">
+          {/* Cart Trigger Button */}
+          <button
+            onClick={toggleCart}
+            className={cn(
+              'relative p-2 rounded-full transition-all flex items-center justify-center',
+              isScrolled
+                ? 'text-white hover:bg-emerald-900/50'
+                : 'text-white hover:bg-white/15 drop-shadow-sm'
+            )}
+            aria-label={`Buka Keranjang (${totalItems} item)`}
+          >
+            <ShoppingBag className="h-5 w-5" />
+            {totalItems > 0 && (
+              <span className="absolute -top-1 -right-1 w-4 h-4 bg-emerald-400 text-black text-[10px] font-bold rounded-full flex items-center justify-center animate-pulse">
+                {totalItems}
+              </span>
+            )}
+          </button>
+
           <Button
             variant="ghost"
             size="sm"
@@ -147,18 +169,32 @@ export function Navbar() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.1 * navItems.length, duration: 0.4 }}
+                  className="flex flex-col gap-3 w-full max-w-xs"
                 >
+                  <Button
+                    variant="secondary"
+                    size="lg"
+                    className="w-full flex items-center justify-center gap-2 border border-emerald-500/40 text-emerald-300"
+                    onClick={() => {
+                      setIsMobileMenuOpen(false)
+                      toggleCart()
+                    }}
+                  >
+                    <ShoppingBag className="h-5 w-5" />
+                    <span>Keranjang ({totalItems})</span>
+                  </Button>
+
                   <Button
                     variant="whatsapp"
                     size="lg"
-                    className="w-full max-w-xs"
+                    className="w-full"
                     onClick={() => {
                       window.open(getWhatsAppUrl(), '_blank')
                       setIsMobileMenuOpen(false)
                     }}
                   >
                     <ChevronRight className="h-5 w-5" aria-hidden="true" />
-                    Start a Consultation
+                    Konsultasi WhatsApp
                   </Button>
                 </motion.div>
               </div>
@@ -171,7 +207,7 @@ export function Navbar() {
 }
 
 function getWhatsAppUrl(): string {
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6281234567890'
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '628992846900'
   const message = encodeURIComponent('Halo AquaSpace, saya ingin berkonsultasi mengenai pembuatan aquascape.')
   return `https://wa.me/${phoneNumber}?text=${message}`
 }

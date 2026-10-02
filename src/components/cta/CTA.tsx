@@ -55,7 +55,7 @@ export function CTA() {
 }
 
 function getWhatsAppUrl(): string {
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6281234567890'
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '628992846900'
   const message = encodeURIComponent('Halo AquaSpace, saya ingin berkonsultasi mengenai pembuatan aquascape custom.')
   return `https://wa.me/${phoneNumber}?text=${message}`
 }

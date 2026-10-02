@@ -49,7 +49,7 @@ export function Footer() {
               <div className="flex items-start gap-2.5">
                 <MessageSquare className="h-4 w-4 text-emerald-400 flex-shrink-0 mt-0.5" />
                 <a href={getWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="hover:text-emerald-300 font-medium transition-colors">
-                  +62 812-3456-7890
+                  +62 899-2846-900
                 </a>
               </div>
             </div>
@@ -81,7 +81,7 @@ export function Footer() {
 }
 
 function getWhatsAppUrl(): string {
-  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '6281234567890'
+  const phoneNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '628992846900'
   const message = encodeURIComponent('Halo AquaSpace, saya ingin berkonsultasi mengenai pembuatan aquascape.')
   return `https://wa.me/${phoneNumber}?text=${message}`
 }
